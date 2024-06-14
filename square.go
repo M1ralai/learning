@@ -10,17 +10,17 @@ func main() {
 	for eternity == true {
 		fmt.Println("Choose 2 number")
 		fmt.Scanln(&number1, &number2)
-		if number1 != number2 {
+		if number1 <= number2 {
 			for number1 <= number2 {
 				fmt.Println(number1 * number1)
-				number1 += 1
+				number1++
 			}
-			for number1 >= number2 {
-				fmt.Println(number2 * number2)
-				number2 += 1
-			}
-		} else {
+		} else if number1 == number2 {
+			fmt.Println("Program closingiplease wait.")
 			eternity = false
+		} else {
+			fmt.Println("Choose first number greater")
 		}
+
 	}
 }
