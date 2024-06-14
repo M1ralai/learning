@@ -5,28 +5,22 @@ import (
 )
 
 func main() {
-	var number1, number2, number3, listing, number, number_square int
-	var eternity bool = false
-	for eternity == false {
-		listing = 1
-		fmt.Println("Please choose two number")
+	var number1, number2 int
+	var eternity bool = true
+	for eternity == true {
+		fmt.Println("Choose 2 number")
 		fmt.Scanln(&number1, &number2)
-		switch {
-		case number1 < number2:
-			number1 = number3
-			number2 = number1
-			number2 = number3
-		case number2 < number1:
-			number = number2
-			for number <= number1 {
-				number_square = number * number
-				fmt.Println(listing, ". number is", number, "and its square is ", number_square)
-				number = number + 1
-				listing = listing + 1
+		if number1 != number2 {
+			for number1 <= number2 {
+				fmt.Println(number1 * number1)
+				number1 += 1
 			}
-			break
-		default:
-			fmt.Println("Please choose two different number.")
+			for number1 >= number2 {
+				fmt.Println(number2 * number2)
+				number2 += 1
+			}
+		} else {
+			eternity = false
 		}
 	}
 }
